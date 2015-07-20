@@ -1,0 +1,291 @@
+/*
+ * «Copyright 2012 JFMDev»
+ *
+ *  This file is part of jqJigsawPuzzle.
+ *
+ *  jqJigsawPuzzle is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU Lesser General Public License as published 
+ *  by the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  jqJigsawPuzzle is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ *  GNU Lesser General Public License for more details.
+ *
+ *  You should have received a copy of the GNU Lesser General Public License
+ *  along with jqJigsawPuzzle. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+div.jigsaw {
+    position: absolute;
+    background-color: white;
+    border-color: darkblue;
+    border-style: solid;
+}
+
+div.jigsaw.highlight {
+    border-color: darkgreen;
+}
+
+div.jigsaw.resolved {
+    border-color: green;
+}
+
+div.jigsaw div.puzzle {
+    position: relative;
+    -webkit-opacity: 0.3;
+}
+
+div.jigsaw div.menu {
+    position: relative;
+}
+
+div.jigsaw div.menu table.menu {
+    width: 100%;
+    color: white;
+    text-align: center;
+    background-color: blue;
+}
+
+div.jigsaw.resolved div.menu table.menu {
+    background-color: darkgreen;
+}
+
+div.jigsaw div.menu table.menu td {
+    padding: 3px;
+}
+
+div.jigsaw div.menu table.menu a.button {
+    color: black;
+    padding: 2px;
+    text-decoration: none;
+    border: 1px solid gray;
+    background-color: lightgray;
+    background-image: -webkit-gradient(linear, 0% 80%, 0% 20%, from(#777), to(#777), color-stop(.5,#aaa));
+}
+
+div.jigsaw div.menu table.menu a.button:hover {
+    background-color: white;
+    background-image: -webkit-gradient(linear, 0% 80%, 0% 20%, from(#999), to(#999), color-stop(.5,#fff));
+}
+
+div.jigsaw div.menu table.menu a.button:active {
+    background-color: gray;
+    background-image: -webkit-gradient(linear, 0% 80%, 0% 20%, from(#555), to(#555), color-stop(.5,#888));
+}
+
+div.jigsaw div.small,
+div.jigsaw div.normal,
+div.jigsaw div.big {
+    position: absolute;
+    background-repeat: no-repeat;
+}
+
+div.jigsaw div.small {
+     width: 43px;
+     height: 43px;
+}
+
+div.jigsaw div.normal {
+    width: 86px;
+    height: 86px;
+}
+ 
+div.jigsaw div.big {
+    width: 170px;
+    height: 170px;
+}
+
+div.jigsaw div.normal.piece_0000 {
+     -webkit-mask-image: url('masks/0000.png');
+}
+ 
+div.jigsaw div.normal.piece_0001 {
+     -webkit-mask-image: url('masks/0001.png');
+}
+ 
+div.jigsaw div.normal.piece_0010 {
+     -webkit-mask-image: url('masks/0010.png');
+}
+ 
+div.jigsaw div.normal.piece_0011 {
+     -webkit-mask-image: url('masks/0011.png');
+}
+ 
+div.jigsaw div.normal.piece_0100 {
+     -webkit-mask-image: url('masks/0100.png');
+}
+ 
+div.jigsaw div.normal.piece_0101 {
+     -webkit-mask-image: url('masks/0101.png');
+}
+ 
+div.jigsaw div.normal.piece_0110 {
+     -webkit-mask-image: url('masks/0110.png');
+}
+ 
+div.jigsaw div.normal.piece_0111 {
+     -webkit-mask-image: url('masks/0111.png');
+}
+ 
+div.jigsaw div.normal.piece_1000 {
+     -webkit-mask-image: url('masks/1000.png');
+}
+ 
+div.jigsaw div.normal.piece_1001 {
+     -webkit-mask-image: url('masks/1001.png');
+}
+ 
+div.jigsaw div.normal.piece_1010 {
+     -webkit-mask-image: url('masks/1010.png');
+}
+ 
+div.jigsaw div.normal.piece_1011 {
+     -webkit-mask-image: url('masks/1011.png');
+}
+ 
+div.jigsaw div.normal.piece_1100 {
+     -webkit-mask-image: url('masks/1100.png');
+}
+ 
+div.jigsaw div.normal.piece_1101 {
+     -webkit-mask-image: url('masks/1101.png');
+}
+ 
+div.jigsaw div.normal.piece_1110 {
+     -webkit-mask-image: url('masks/1110.png');
+}
+ 
+div.jigsaw div.normal.piece_1111 {
+     -webkit-mask-image: url('masks/1111.png');
+}
+
+div.jigsaw div.big.piece_0000 {
+     -webkit-mask-image: url('masks/big/0000.png');
+}
+ 
+div.jigsaw div.big.piece_0001 {
+     -webkit-mask-image: url('masks/big/0001.png');
+}
+ 
+div.jigsaw div.big.piece_0010 {
+     -webkit-mask-image: url('masks/big/0010.png');
+}
+ 
+div.jigsaw div.big.piece_0011 {
+     -webkit-mask-image: url('masks/big/0011.png');
+}
+ 
+div.jigsaw div.big.piece_0100 {
+     -webkit-mask-image: url('masks/big/0100.png');
+}
+ 
+div.jigsaw div.big.piece_0101 {
+     -webkit-mask-image: url('masks/big/0101.png');
+}
+ 
+div.jigsaw div.big.piece_0110 {
+     -webkit-mask-image: url('masks/big/0110.png');
+}
+ 
+div.jigsaw div.big.piece_0111 {
+     -webkit-mask-image: url('masks/big/0111.png');
+}
+ 
+div.jigsaw div.big.piece_1000 {
+     -webkit-mask-image: url('masks/big/1000.png');
+}
+ 
+div.jigsaw div.big.piece_1001 {
+     -webkit-mask-image: url('masks/big/1001.png');
+}
+ 
+div.jigsaw div.big.piece_1010 {
+     -webkit-mask-image: url('masks/big/1010.png');
+}
+ 
+div.jigsaw div.big.piece_1011 {
+     -webkit-mask-image: url('masks/big/1011.png');
+}
+ 
+div.jigsaw div.big.piece_1100 {
+     -webkit-mask-image: url('masks/big/1100.png');
+}
+ 
+div.jigsaw div.big.piece_1101 {
+     -webkit-mask-image: url('masks/big/1101.png');
+}
+ 
+div.jigsaw div.big.piece_1110 {
+     -webkit-mask-image: url('masks/big/1110.png');
+}
+ 
+div.jigsaw div.big.piece_1111 {
+     -webkit-mask-image: url('masks/big/1111.png');
+}
+
+
+div.jigsaw div.small.piece_0000 {
+     -webkit-mask-image: url('masks/small/0000.png');
+}
+ 
+div.jigsaw div.small.piece_0001 {
+     -webkit-mask-image: url('masks/small/0001.png');
+}
+ 
+div.jigsaw div.small.piece_0010 {
+     -webkit-mask-image: url('masks/small/0010.png');
+}
+ 
+div.jigsaw div.small.piece_0011 {
+     -webkit-mask-image: url('masks/small/0011.png');
+}
+ 
+div.jigsaw div.small.piece_0100 {
+     -webkit-mask-image: url('masks/small/0100.png');
+}
+ 
+div.jigsaw div.small.piece_0101 {
+     -webkit-mask-image: url('masks/small/0101.png');
+}
+ 
+div.jigsaw div.small.piece_0110 {
+     -webkit-mask-image: url('masks/small/0110.png');
+}
+ 
+div.jigsaw div.small.piece_0111 {
+     -webkit-mask-image: url('masks/small/0111.png');
+}
+ 
+div.jigsaw div.small.piece_1000 {
+     -webkit-mask-image: url('masks/small/1000.png');
+}
+ 
+div.jigsaw div.small.piece_1001 {
+     -webkit-mask-image: url('masks/small/1001.png');
+}
+ 
+div.jigsaw div.small.piece_1010 {
+     -webkit-mask-image: url('masks/small/1010.png');
+}
+ 
+div.jigsaw div.small.piece_1011 {
+     -webkit-mask-image: url('masks/small/1011.png');
+}
+ 
+div.jigsaw div.small.piece_1100 {
+     -webkit-mask-image: url('masks/small/1100.png');
+}
+ 
+div.jigsaw div.small.piece_1101 {
+     -webkit-mask-image: url('masks/small/1101.png');
+}
+ 
+div.jigsaw div.small.piece_1110 {
+     -webkit-mask-image: url('masks/small/1110.png');
+}
+ 
+div.jigsaw div.small.piece_1111 {
+     -webkit-mask-image: url('masks/small/1111.png');
+}
