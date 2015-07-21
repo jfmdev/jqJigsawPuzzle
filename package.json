@@ -1,6 +1,6 @@
 {
-  "name": "jqJigsawPuzzle",
-  "version": "1.0.0",
+  "name": "jq-jigsaw-puzzle",
+  "version": "1.0.1",
   "description": "A JavaScript library that lets you create jigsaw puzzles in your web pages",
   "main": "source/jqJigsawPuzzle.js",
   "scripts": {
@@ -16,11 +16,12 @@
     "plugin",
     "library",
     "jquery",
+	"jquery-plugin",
     "javascript",
     "game"
   ],
   "author": "JFMDev <jfmdev@inboxalias.com> (http://jfmdev.github.io/)",
-  "license": "LGPLv3",
+  "license": "LGPL-3.0",
   "bugs": {
     "url": "https://github.com/jfmdev/jqjigsawpuzzle/issues"
   },
